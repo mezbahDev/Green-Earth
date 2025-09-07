@@ -25,15 +25,36 @@
 
     <!-- navbar -->
 
-    <header class="flex justify-between bg-[#15803D] py-6 px-[130px] text-white items-center">
-        <h1 class="font-bold text-xl">Green Earth</h1>
-        <ul class="flex gap-x-6 font-medium">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Plant a Tree</a></li>
-        </ul>
-        <button class="btn btn-active btn-warning rounded-[999px] text-[#15803D] bg-[#FACC15]">Plant a Tree</button>
-    </header>
+    <div class="navbar bg-base-100 shadow-sm bg-[#15803D] text-white">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden bg-[#15803D] ">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0"
+                    class=" bg-[#15803D] menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Plant a Tree</a></li>
+                </ul>
+            </div>
+            <a class="btn btn-ghost text-xl border-none shadow-none bg-transparent hover:text-white">Green Earth</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Plant a Tree</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a class="btn text-[#15803D] border-none rounded-[999px] bg-[#FACC15]">Plant a Tree</a>
+        </div>
+    </div>
 
 </body>
 
