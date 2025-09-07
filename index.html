@@ -59,10 +59,14 @@
 
     <!-- banner section -->
     <section class="flex items-center bg-[#CFF0DC] justify-between">
-        <img class="" src="assets/hero-leaf1.png" alt="left leaf pic" />
+        <img class="hidden lg:block md:w-[300px]" src="assets/hero-leaf1.png" alt="left leaf pic" />
         <div class="flex flex-col items-center gap-2">
-            <h1 class="text-[48px] font-bold text-[#1F2937]">Plant a Tree, Grow a Future</h1>
-            <p class="text-center text-[#1F2937] max-w-[583px] text-[17px]">Join our mission to plant 1 million trees
+            <h1 class="text-[30px] md:text-[40px] font-bold text-[#1F2937] text-center py-3 md:py-4">Plant a Tree, Grow
+                a Future
+            </h1>
+            <p class="text-center text-[#1F2937] max-w-[583px] text-[13px] md:text-[17px] px-5">Join our mission to
+                plant 1
+                million trees
                 and make the
                 Earth greener
                 for future
@@ -71,30 +75,33 @@
                 <a class="btn text-[#15803D] border-none rounded-[999px] bg-[#FACC15]">Get Involved</a>
             </div>
         </div>
-        <img src="assets/hero-leaf2.png" alt="right leaf pic" />
+        <img class="hidden lg:block md:w-[300px]" src="assets/hero-leaf2.png" alt="right leaf pic" />
     </section>
 
     <!-- trees section -->
-    <section class="mx-[135px] my-[100px] flex flex-col items-center gap-[40px]">
-        <h1 class="text-[45px] font-semibold">Choose Your Trees</h1>
+    <section class="px-[135px] pt-[50px] pb-[100px] flex flex-col items-center gap-[40px]">
+        <p class="text-center text-[25px] md:text-[45px] font-semibold">Choose Your Trees</p>
 
-        <div class="flex gap-[30px]">
+        <div class="flex gap-[30px] flex-col md:flex-row items-center md:items-start">
 
-            <!-- category list -->
-            <div class="flex flex-col gap-[16px] w-[250px]">
-                <h2 class="font-semibold text-[20px]">Categories</h2>
-                <div id="categoriesList"
-                    class=" w-[250px] text-[#1F2937] rounded-[4px] flex flex-col px-[10px] py-[10px] cursor-pointer">
-                    <a id="allTrees" class="px-2 py-1 rounded hover:bg-[#15803D] hover:text-[#FFFFFF]">All Trees</a>
+            <div class="flex flex-col md:flex-row gap-6 w-full sm:items-start items-center">
+
+                <!-- category list -->
+                <div class="flex flex-col gap-[16px] w-[250px] items-center">
+                    <h2 class="font-semibold text-[20px]">Categories</h2>
+                    <div id="categoriesList"
+                        class="items-center w-[250px] text-[#1F2937] rounded-[4px] flex flex-col px-[10px] py-[10px] cursor-pointer">
+                        <a id="allTrees" class="px-2 py-1 rounded hover:bg-[#15803D] hover:text-[#FFFFFF]">All Trees</a>
+                    </div>
+                </div>
+
+                <!-- card list -->
+                <div id="treeCardContainer" class="flex flex-wrap gap-6 justify-center flex-1 w-full">
                 </div>
             </div>
 
-            <!-- card list -->
-            <div id="treeCardContainer" class="flex flex-wrap gap-[30px] flex-1">
-            </div>
-
             <!-- cart list -->
-            <div id="cartList" class="flex flex-col p-4 bg-white w-[240px] gap-2 rounded-[16px]">
+            <div id="cartList" class="flex flex-col p-4 bg-white w-full gap-2 rounded-[16px] sm:w-[220px] md:w-[220px]">
                 <h1 class="text-[20px] font-semibold">Your Cart</h1>
                 <div id="cartItems" class="flex flex-col gap-2">
 

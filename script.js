@@ -93,7 +93,7 @@ const displayCards = (plants) => {
   plants.forEach((plant) => {
     const card = document.createElement("div");
     card.className =
-      "flex flex-col items-center w-[340px] h-[380px] p-4 bg-white gap-[12px] rounded-[8px]";
+      "flex flex-col items-center w-[340px] h-auto p-4 bg-white gap-[12px] rounded-[8px]";
     card.innerHTML = `
             <img class="w-full h-[186px] rounded-[6px]" src="${plant.image}" alt="${plant.name}" />
                     <div class="flex flex-col gap-[6px]">
