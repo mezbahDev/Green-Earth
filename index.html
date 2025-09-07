@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
-<body class="font-inter">
+<body class="font-inter bg-[#DCFCE7]">
 
     <!-- navbar -->
 
@@ -77,19 +77,34 @@
     <!-- trees section -->
     <section class="mx-[135px] my-[100px] flex flex-col items-center gap-[40px]">
         <h1 class="text-[45px] font-semibold">Choose Your Trees</h1>
-        <div class="flex gap-auto">
 
-            <div class="flex flex-col gap-[16px] max-w-[250px] bg-red-400">
+        <div class="flex gap-[30px]">
+
+            <!-- category list -->
+            <div class="flex flex-col gap-[16px] w-[250px]">
                 <h2 class="font-semibold text-[20px]">Categories</h2>
                 <div id="categoriesList"
-                    class=" w-full text-[#1F2937] rounded-[4px] flex flex-col px-[10px] py-[8px] font-semibold cursor-pointer">
+                    class=" w-[250px] text-[#1F2937] rounded-[4px] flex flex-col px-[10px] py-[10px] cursor-pointer">
                     <a class="px-2 py-1 rounded hover:bg-[#15803D] hover:text-[#FFFFFF]">All Trees</a>
                 </div>
-
-
             </div>
-            <div></div>
-            <div></div>
+
+            <!-- card list -->
+            <div id="treeCardContainer" class="flex flex-wrap gap-[30px] flex-1">
+            </div>
+
+            <!-- cart list -->
+            <div id="cartList" class="flex flex-col p-4 bg-white w-[240px] gap-2 rounded-[16px]">
+                <h1 class="text-[20px] font-semibold">Your Cart</h1>
+                <div id="cartItems" class="flex flex-col gap-2">
+
+                </div>
+                <div class="close flex justify-between font-medium items-center">
+                    <h1>Total:</h1>
+                    <p>৳ <span id="totalPrice">0</span></p>
+                </div>
+            </div>
+
         </div>
 
     </section>
