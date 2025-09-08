@@ -120,6 +120,16 @@ const displayCards = (plants) => {
       sum(plant.name, plant.price);
     });
 
+    card.addEventListener("click", () => {
+      modalImage.src = plant.image;
+      modalName.innerText = plant.name;
+      modalCategory.innerText = plant.category;
+      modalDescription.innerText = plant.description;
+      modalPrice.innerText = plant.price;
+      plantModal.classList.remove("hidden");
+      plantModal.classList.add("flex");
+    });
+
     treeCardContainer.appendChild(card);
   });
 };
@@ -172,3 +182,25 @@ function sum(name, price) {
 function updateTotal() {
   totalPrice.innerText = total;
 }
+
+// modal elements
+const plantModal = document.getElementById("plantModal");
+const closeModal = document.getElementById("closeModal");
+const modalImage = document.getElementById("modalImage");
+const modalName = document.getElementById("modalName");
+const modalCategory = document.getElementById("modalCategory");
+const modalDescription = document.getElementById("modalDescription");
+const modalPrice = document.getElementById("modalPrice");
+
+closeModal.addEventListener("click", () => {
+  plantModal.classList.add("hidden");
+  plantModal.classList.remove("flex");
+});
+
+// Click outside modal to close
+plantModal.addEventListener("click", (e) => {
+  if (e.target === plantModal) {
+    plantModal.classList.add("hidden");
+    plantModal.classList.remove("flex");
+  }
+});
