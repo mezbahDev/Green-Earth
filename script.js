@@ -49,30 +49,39 @@ const displayCategory = (posts) => {
 
 categoryLoadData();
 
+// spinner
+const spinner = document.getElementById("spinner");
+
 // load plants by category
 const loadCategoryPlants = (categoryId) => {
+  spinner.classList.remove("hidden");
   fetch(`https://openapi.programming-hero.com/api/category/${categoryId}`)
     .then((res) => res.json())
     .then((data) => {
       displayCards(data.plants);
+      spinner.classList.add("hidden");
     });
 };
 
 // load All Plants
 const loadAllPlants = () => {
+  spinner.classList.remove("hidden");
   fetch("https://openapi.programming-hero.com/api/plants")
     .then((res) => res.json())
     .then((data) => {
       displayCards(data.plants);
+      spinner.classList.add("hidden");
     });
 };
 
 // Tree Card API called
 const cardLoadData = () => {
+  spinner.classList.remove("hidden");
   fetch("https://openapi.programming-hero.com/api/plants")
     .then((res) => res.json())
     .then((data) => {
       displayCards(data.plants);
+      spinner.classList.add("hidden");
     });
 };
 
@@ -95,7 +104,7 @@ const displayCards = (plants) => {
     card.className =
       "flex flex-col items-center w-[340px] h-auto p-4 bg-white gap-[12px] rounded-[8px]";
     card.innerHTML = `
-            <img class="w-full h-[185px] rounded-[6px]" src="${plant.image}" alt="${plant.name}" />
+            <img class="w-full h-[186px] rounded-[6px]" src="${plant.image}" alt="${plant.name}" />
                     <div class="flex flex-col gap-[6px]">
                         <h1 class="text-[14px] font-semibold text-[#1F2937]">${plant.name}</h1>
                         <p class="text-[12px]">${plant.description}</p>
